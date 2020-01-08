@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ceci représente le haut de la page que nous obtenons après avoir cliqué
+sur une une des lignes de notre ListView. La suite du contenu sera directement écrite dans le "Room Activity"-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoomActivity">
+
+    <TextView
+        android:id="@+id/roomName"
+        android:layout_width="103dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/room_name"
+        app:layout_constraintEnd_toStartOf="@+id/refreshButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/refreshButton"
+        android:layout_width="106dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/requestButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:background="@color/colorPrimary"
+        android:divider="@android:color/darker_gray"
+        android:id="@+id/roomTable"
+        android:layout_width="379dp"
+        android:layout_height="596dp"
+        android:layout_marginTop="70dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomName" />
+
+    <TextView
+        android:id="@+id/roomFloor"
+        android:layout_width="171dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/room_floor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

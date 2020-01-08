@@ -1,0 +1,52 @@
+<!-- emse_dom_js//dom_api.html -->
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <title>Utiliser des API</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <header style="display: flex;">
+              <div id="titre_principal">
+                  <div id="logo">
+                      <h1>EMSE</h1>
+                  </div>
+                  <h2>Programmation Web et Web Services - du 26 au 29 novembre 2019 - </h2>
+              </div>
+          <nav>
+              <ul>
+                  <li><a href="dom.html">DOM</a></li>
+                  <li><a href="dom_api.html">dom_api</a></li>
+              </ul>
+          </nav>
+
+      </header>
+      <div class="container-flex">
+        <p>
+          <h3>Send a request XMLHttpRequest</h3>
+        </p>
+
+        <div >
+          <table class="table">
+              <thead>
+                <tr class="text-center"><th colspan=4 >List of Rooms</th></tr>
+                <tr class="text-center">
+                    <th scope="col">ROOM</th>
+                </tr>
+              </thead>
+              <tbody id="rooms" class="text-center">
+                  
+              </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- SCRIPTS -->
+      <script src="dom_api.js"></script>
+  </body>
+</html>

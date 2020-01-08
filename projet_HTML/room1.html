@@ -1,0 +1,76 @@
+<!-- /var/www/html/sites/emse/dom_api.html -->
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+ <head>
+   <title>Utiliser des API</title>
+   <meta charset="utf-8" />
+   <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<style>
+  body
+  {
+       background-image: url('images/background.jpg');
+       background-size: cover;
+  }
+</style>
+ </head>
+ <body >
+   <header style="display: flex;">
+     <div id="titre_principal">
+       <div id="logo">
+         <h1> Your Rooms :</h1>
+       </div>
+     </div>
+   </header>
+   <div class="container-flex">
+          <div id="app">
+              <ul>
+                <section v-if="errored">
+                  <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+                </section>
+
+                <section v-else>
+                  <div v-if="loading">Loading...</div>
+
+                  <div
+                    v-else
+                    v-for="room in rooms"
+                    class="room"
+                  >
+                    <!--  Ici on parcourir nos chambres et on s'apprête à lui afficher son nom et
+                     l'état des lumières qui y sont associées-->
+                        <li>
+
+                          {{ room.name }} :
+
+                            <ul
+                              v-for="light in room.lights"
+                              class="light"
+                            >
+                                light : {{light.id}}
+
+                                <span v-if="light.status === 'ON' "> <img src="images/light-on.png"> </span>
+                                <span v-else>  <img src="images/light-off.png"> </span>
+                                      <!--  Après avoir récupéré affiché les états de chaque lumière
+                                       de la chambre on va permettre à l'utilisateur de pouvoir changer
+                                        l'état de la lumière en cliquant sur les icônes-->
+                                <button id="button" v-on:click="fonc(light)" >Switch Light</button>
+                                <!--  Ici on renvoie à une fonction du fichier api.js -->
+                            </ul>
+
+                        </li>
+                  </div>
+                </section>
+              </ul>
+           </div>
+      </div>
+ </body>
+ <script  src="api.js"></script>
+</html>

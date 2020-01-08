@@ -1,0 +1,41 @@
+@font-face { /* Définition d'une nouvelle police nommée CAC Champagne */
+    font-family: 'cac_champagneregular';
+    src: url('contenu/cac_champagne.ttf') format('truetype'),
+         url('cac_champagne-webfont.svg#cac_champagneregular') format('svg');
+}
+/* On travaille sur la balise body, donc sur TOUTE la page */
+body
+{
+  background: url("images/screen.png") fixed no-repeat top right;
+}
+h1 /* Utilisation de la police qu'on vient de définir sur les titres */
+{
+    font-family: 'cac_champagneregular', Arial, serif;
+    font-size: 3em;
+    text-decoration: underline;
+    border: 3px blue dashed;
+}
+p {
+    font-size: 1.3em;
+    border: 2px solid black;
+    border-radius: 10px 5px 10px 5px;
+    box-shadow: 6px 6px 6px black inset;
+}
+p em {
+  color: yellow;
+}
+.p_rouge {
+  color: red;
+}
+a /* Liens par défaut (non survolés) */{
+   text-decoration: none;
+   color: red;
+   font-style: italic;
+}
+a:hover /* Apparence au survol des liens */{
+   text-decoration: underline;
+   color: green;
+}
+a:active /* Quand le visiteur clique sur le lien */{
+    background-color: #FFCC66;
+}

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Faircorp App</string>
+    <string name="light">light</string>
+    <string name="image_content_description">image_content_description</string>
+    <string name="lightonoff">lightonoff</string>
+    <string name="ringonoff">ringonoff</string>
+    <string name="requestButton">refresh</string>
+    <string name="room_name">room_name</string>
+    <string name="room_floor">room_floor</string>
+</resources>
